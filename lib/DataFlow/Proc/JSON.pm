@@ -5,7 +5,7 @@ use warnings;
 
 # ABSTRACT: A JSON converting processor
 
-our $VERSION = '1.111750'; # VERSION
+our $VERSION = '1.111810'; # VERSION
 
 use Moose;
 extends 'DataFlow::Proc::Converter';
@@ -13,11 +13,9 @@ extends 'DataFlow::Proc::Converter';
 use namespace::autoclean;
 use JSON::Any;
 
-has '+policy' => (
-    'default' => sub {
-        return shift->direction eq 'CONVERT_TO' ? 'ArrayRef' : 'Scalar';
-    },
-);
+sub _policy {
+    return shift->direction eq 'CONVERT_TO' ? 'ArrayRef' : 'Scalar';
+}
 
 has '+converter' => (
     lazy    => 1,
@@ -37,21 +35,17 @@ has '+converter' => (
 
 has '+converter_opts' => ( 'init_arg' => 'json_opts', );
 
-has '+converter_subs' => (
-    'lazy'    => 1,
-    'default' => sub {
-        my $self = shift;
-        return {
-            'CONVERT_TO' => sub {
-                return $self->converter->to_json($_);
-            },
-            'FROM_JSON' => sub {
-                return $self->converter->from_json($_);
-            },
-        };
-    },
-    'init_arg' => undef,
-);
+sub _build_subs {
+    my $self = shift;
+    return {
+        'CONVERT_TO' => sub {
+            return $self->converter->to_json($_);
+        },
+        'FROM_JSON' => sub {
+            return $self->converter->from_json($_);
+        },
+    };
+}
 
 __PACKAGE__->meta->make_immutable;
 
@@ -69,7 +63,7 @@ DataFlow::Proc::JSON - A JSON converting processor
 
 =head1 VERSION
 
-version 1.111750
+version 1.111810
 
 =for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders
 

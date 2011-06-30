@@ -1,6 +1,14 @@
 Revision History for DataFlow-Proc-JSON
 =======================================
 
+1.111810
+--------
+
+commit bb672c145cdd08106351fece1b73a2a7d4668c55
+Author: Alexei Znamensky <russoz@cpan.org>
+
+    using Moose "builder" rather than "default" (almost everywhere)
+
 ===================================
 End of changes in the last 365 days
 ===================================
