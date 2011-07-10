@@ -28,11 +28,11 @@ my %WriteMakefileArgs = (
   'NAME' => 'DataFlow::Proc::JSON',
   'PREREQ_PM' => {
     'DataFlow::Proc::Converter' => '0',
-    'JSON::Any' => '0',
+    'JSON' => '0',
     'Moose' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '1.111810',
+  'VERSION' => '1.111910',
   'test' => {
     'TESTS' => 't/*.t'
   }

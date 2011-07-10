@@ -4,7 +4,7 @@
       "Alexei Znamensky <russoz@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200008, CPAN::Meta::Converter version 2.110930",
+   "generated_by" : "Dist::Zilla version 4.200009, CPAN::Meta::Converter version 2.110930",
    "license" : [
       "perl_5"
    ],
@@ -22,7 +22,7 @@
       "runtime" : {
          "requires" : {
             "DataFlow::Proc::Converter" : 0,
-            "JSON::Any" : 0,
+            "JSON" : 0,
             "Moose" : 0,
             "namespace::autoclean" : 0
          }
@@ -48,6 +48,6 @@
          "web" : "http://github.com/russoz/DataFlow-Proc-JSON"
       }
    },
-   "version" : "1.111810"
+   "version" : "1.111910"
 }
 

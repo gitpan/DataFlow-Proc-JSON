@@ -5,13 +5,13 @@ use warnings;
 
 # ABSTRACT: A JSON converting processor
 
-our $VERSION = '1.111810'; # VERSION
+our $VERSION = '1.111910'; # VERSION
 
 use Moose;
 extends 'DataFlow::Proc::Converter';
 
 use namespace::autoclean;
-use JSON::Any;
+use JSON;
 
 sub _policy {
     return shift->direction eq 'CONVERT_TO' ? 'ArrayRef' : 'Scalar';
@@ -63,7 +63,7 @@ DataFlow::Proc::JSON - A JSON converting processor
 
 =head1 VERSION
 
-version 1.111810
+version 1.111910
 
 =for :stopwords cpan testmatrix url annocpan anno bugtracker rt cpants kwalitee diff irc mailto metadata placeholders
 
