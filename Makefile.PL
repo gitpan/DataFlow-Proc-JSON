@@ -27,12 +27,13 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'DataFlow::Proc::JSON',
   'PREREQ_PM' => {
+    'DataFlow' => '1.112100',
     'DataFlow::Proc::Converter' => '0',
     'JSON' => '0',
     'Moose' => '0',
     'namespace::autoclean' => '0'
   },
-  'VERSION' => '1.111910',
+  'VERSION' => '1.112100',
   'test' => {
     'TESTS' => 't/*.t'
   }

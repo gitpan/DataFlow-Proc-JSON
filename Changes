@@ -1,8 +1,16 @@
 Revision History for DataFlow-Proc-JSON
 =======================================
 
-1.111910
+1.112100
 --------
+
+commit d865b2829bcfed631994894dee6f98636603dbc6
+Author: Alexei Znamensky <russoz@cpan.org>
+
+    added explicit dependency on DataFlow
+
+v1.111910 2011-07-10
+--------------------
 
 commit 4fbffd973075014350bee061095781c1dc8ba6e7
 Author: Alexei Znamensky <russoz@cpan.org>
